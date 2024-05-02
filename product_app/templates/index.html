@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Add Production Log</title>
+</head>
+<body>
+    <div align= "center" class ="container">
+    <h2 style="color: cornflowerblue;">Add Production Log</h2>
+    <form action="{% url 'add_production_log' %}" method="post">
+        {% csrf_token %}
+        <div>
+            {{ form.as_p }}
+        </div>
+
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>

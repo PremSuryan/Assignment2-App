@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Machine Log</title>
+</head>
+<body>
+    <div align= "center" class ="container">
+    <h2 style="color: cornflowerblue;">Machine Log</h2>
+    <form action="{% url 'machine_log' %}" method="post">
+        {% csrf_token %}
+        <div>
+            {{ form.as_p }}
+        </div>
+
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>
